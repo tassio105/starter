@@ -6,8 +6,13 @@ let country = 'Country';
 let continent = 'Continent';
 let population = 'Population';
 
-if (country === 'Country' && continent === 'Continent' && population === 'Population')
-    console.log("Brazil, South America, 212 Billion people");
+if (country === 'Country' && continent === 'Continent' && population === 'Population') {
+    let country = "Brazil";
+    let continent = "South America";
+    let population = 212.6;
+    console.log(country, continent, population, "billions");
+}
+
 
 //if (country === 'Country') console.log("Brazil");
 //if (continent === 'Continent') console.log("South America");
