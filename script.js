@@ -22,7 +22,7 @@ if (country === 'Country' && continent === 'Continent' && population === 'Popula
 
 // Variable types
 //true;
-
+/*
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -58,3 +58,26 @@ if (isIsland === true) {
 language = 'Portuguese';
 
 console.log(isIsland, ",", population, ",", country, ",", language);
+*/
+
+// Lecture 3 - Cons and var
+
+let age = 30;
+age = 31;
+
+//console.log(age);
+
+const birthYear = 1991;
+// birthYear = 1990; - a constant cannot be changed
+
+//const job; //need a initial value in order to place a constant. Missing initializer error
+
+var job = 'programmer';
+job = 'teacher'
+
+lastName = 'Andrade';
+console.log(lastName);
+
+
+//Lecture 4 - Operatiors 
+
