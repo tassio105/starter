@@ -150,6 +150,9 @@ m tall.
 
 // TEST 1
 //const BMI = mass / height ** 2; //= mass / (height * height);
+
+/*
+
 let markBMI;
 let johnBMI;
 
@@ -200,12 +203,12 @@ let john_BMI = john_Weight / john_Height ** 2;
 let comparison_MarkAndJohn;
 
 if (mark_BMI > john_BMI) {
-    comparison_MarkAndJohn = mark_BMI;
-    console.log('Mark BMI is ' + mark_BMI + ' and John BMI is ' + john_BMI + '. Mark has a higher BMI than John.', comparison_MarkAndJohn);
+    //comparison_MarkAndJohn = mark_BMI;
+    console.log('Mark BMI is ' + mark_BMI + ' and John BMI is ' + john_BMI + '. Mark has a higher BMI than John.');//, comparison_MarkAndJohn);
 }
 else {
-    comparison_MarkAndJohn = john_BMI;
-    console.log('Mark BMI is ' + mark_BMI + ' and John BMI is ' + john_BMI + '. John has a higher BMI than Mark.', comparison_MarkAndJohn);
+    //comparison_MarkAndJohn = john_BMI;
+    console.log('Mark BMI is ' + mark_BMI + ' and John BMI is ' + john_BMI + '. John has a higher BMI than Mark.');//, comparison_MarkAndJohn);
 }
 
 // Resolution of the challenge
@@ -222,4 +225,100 @@ console.log(BMIMark, BMIJohn);
 const markHigher_BMI = BMIMark > BMIJohn;
 
 console.log(BMIMark, BMIJohn, markHigher_BMI);
+*/
 
+// Strings and template literals
+
+/*
+const firstName = 'Tassio';
+const job = 'Programmer';
+const birthYear = 1991;
+const year = 2020;
+
+const tassio = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(tassio);
+
+//use of back quotes `` to write text without having to concatinate and create spaces manually.
+const tassioNew = `I'm ${firstName}, a ${(year - birthYear)} years old ${job}.`;
+console.log(tassioNew);
+
+console.log(`Just a regular string...`);
+// using \n\ to write multiple lines on the console
+console.log('String with \n\
+multiple \n\
+lines');
+//easier way to write lines using ``
+console.log(`String
+with multiple
+lines`);
+*/
+
+/*
+//Taking Decisions using IF/ELSE statements
+const age = 19;
+const isOldEnough = age >= 18;
+
+if (isOldEnough) {
+    console.log('Sarah can start driving license 🚗');
+}
+
+//other way to write + using else statement
+
+const age_ = 15;
+
+if (age_ >= 18) {
+    console.log('Sarah can start driving license 🚗');
+}
+else {
+    const yearsLeft = 18 - age_;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear = 1991;
+
+let century;
+if (birthYear <= 2000) {
+    century = 20;
+}
+else {
+    century = 21;
+}
+console.log(century);
+*/
+
+// Challenge 2
+
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and
+improve it.
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message
+is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+BMI (28.3) is higher than John's (23.9)!"
+Hint: Use an if/else statement
+*/
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 150;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+let BMIdifference = BMIMark - BMIJohn; // if John's BMI is higher the number will be negative. 
+// quick solution I could think of was multiplying the result of else statement by (-1)
+// because BMIJohn if bigger will always give a negative BMIdifference.
+if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI is equal to ${BMIMark.toFixed(1)}
+Jonh's BMI is equal to ${BMIJohn.toFixed(1)}
+Mark BMI is ${BMIdifference.toFixed(1)} bigger than John's.`);
+    //console.log(`Mark's BMI (${BMIMark.toFixed(1)}) is higher than John's BMI (${BMIJohn.toFixed(1)})`);
+}
+else {
+    console.log(`Mark's BMI is equal to ${BMIMark.toFixed(1)}
+Jonh's BMI is equal to ${BMIJohn.toFixed(1)}
+John's BMI is ${(-1) * BMIdifference.toFixed(1)} bigger than John's.`); // multiplied BMIdifference by -1 to get always a positive value.
+    //console.log(`John's BMI (${BMIJohn.toFixed(1)}) is higher than Mark's BMI (${BMIMark.toFixed(1)})`);
+}
