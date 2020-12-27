@@ -322,3 +322,4 @@ Jonh's BMI is equal to ${BMIJohn.toFixed(1)}
 John's BMI is ${(-1) * BMIdifference.toFixed(1)} bigger than John's.`); // multiplied BMIdifference by -1 to get always a positive value.
     //console.log(`John's BMI (${BMIJohn.toFixed(1)}) is higher than Mark's BMI (${BMIMark.toFixed(1)})`);
 }
+
