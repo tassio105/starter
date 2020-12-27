@@ -297,7 +297,7 @@ is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark
 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
 BMI (28.3) is higher than John's (23.9)!"
 Hint: Use an if/else statement
-*/
+
 
 const massMark = 78;
 const heightMark = 1.69;
@@ -307,7 +307,7 @@ const heightJohn = 1.95;
 const BMIMark = massMark / heightMark ** 2;
 const BMIJohn = massJohn / (heightJohn * heightJohn);
 
-let BMIdifference = BMIMark - BMIJohn; // if John's BMI is higher the number will be negative. 
+let BMIdifference = BMIMark - BMIJohn; // if John's BMI is higher the number will be negative.
 // quick solution I could think of was multiplying the result of else statement by (-1)
 // because BMIJohn if bigger will always give a negative BMIdifference.
 if (BMIMark > BMIJohn) {
@@ -321,5 +321,173 @@ else {
 Jonh's BMI is equal to ${BMIJohn.toFixed(1)}
 John's BMI is ${(-1) * BMIdifference.toFixed(1)} bigger than John's.`); // multiplied BMIdifference by -1 to get always a positive value.
     //console.log(`John's BMI (${BMIJohn.toFixed(1)}) is higher than Mark's BMI (${BMIMark.toFixed(1)})`);
+}
+*/
+/*
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Tassio')); // NaN - Not a Number - invalid number
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// type coercion
+console.log(`I'm ${29} years old.`);
+console.log('23' - '10' - 3);
+console.log('23' * '2');
+console.log('23' > '18');
+
+let n = '1' + 1;
+n--;
+console.log(n);
+*/
+
+// BOOLEAN - TRUEPHY AND FALSY
+
+// 5 falsy values: 0, '', undefined, null, NaN
+// the rest will be truephy values
+/*
+console.log(Boolean(0)); //false
+console.log(Boolean(undefined)); //false
+console.log(Boolean('Tassio')); //true
+console.log(Boolean({})); //true
+console.log(Boolean('')); //false
+
+const money = 0; // money equal 0 , thus is a false value for boolean.
+if (money) {
+    console.log(`Don't spend it all ;)`);
+}
+else {
+    console.log(`You should get a job!`);
+}
+
+let height; // height is undefined so result of boolean will be false.
+if (height) {
+    console.log('YAY! Height is defined');
+}
+else {
+    console.log('Height is UNDEFINED');
+}
+*/
+/*
+const age = 18;
+//const age = '18';
+if (age === 18) console.log(`You just became an adult. (strict)`); // === only if the value is definetely equal to the next
+if (age == 18) console.log(`You just became an adult. (loose)`); // == will use type coercion to identify if value is equal to the next
+
+//const favourite = prompt("What's your favourite number?");
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+//if (favourite == 12)
+if (favourite === 12) {
+    console.log(`Cool! 12 is a great number!`);
+}
+else if (favourite === 7) {
+    console.log(`7 is not as cool as 12 :(`) // can use 'else if' as long as I want
+}
+else {
+    console.log(`Number is not 12 nor 7. Sorry`)
+}
+
+if (favourite !== 12) console.log(`Why not 12?`); // !== not equal symbol
+*/
+
+// BOOLEAN LOGIC: THE AND, OR & NOT OPERATORS
+
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//     console.log(`Sarah is able to drive.`)
+// }
+// else {
+//     console.log(`Someone else should drive...`)
+// }
+
+// const isTired = true; // C
+// console.log(hasDriversLicense || hasGoodVision || isTired);
+
+// if (hasDriversLicense && hasGoodVision && !isTired) {
+//     console.log(`Sarah is able to drive.`)
+// }
+// else {
+//     console.log(`Someone else should drive...`)
+// }
+
+// CHALLENGE 3 
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks 😀
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+Test data:
+ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+*/
+// DATA 1
+// const dolphinsGame1 = 96;
+// const dolphinsGame2 = 108;
+// const dolphinsGame3 = 89;
+
+// const koalasGame1 = 88;
+// const koalasGame2 = 91;
+// const koalasGame3 = 110;
+
+// DATA 2
+// const dolphinsGame1 = 97;
+// const dolphinsGame2 = 112;
+// const dolphinsGame3 = 101;
+
+// const koalasGame1 = 109;
+// const koalasGame2 = 95;
+// const koalasGame3 = 123;
+
+// DATA 3
+const dolphinsGame1 = 97;
+const dolphinsGame2 = 112;
+const dolphinsGame3 = 101;
+
+const koalasGame1 = 109;
+const koalasGame2 = 95;
+const koalasGame3 = 106;
+
+const dolphinsAverage = (dolphinsGame1 + dolphinsGame2 + dolphinsGame3) / 3;
+const koalasAverage = (koalasGame1 + koalasGame2 + koalasGame3) / 3;
+
+if ((dolphinsAverage > koalasAverage) && dolphinsAverage >= 100) {
+    console.log(`Dolphins won the best of 3 with ${dolphinsAverage.toFixed(1)}. Congrats!!`);
+}
+else if ((koalasAverage > dolphinsAverage) && koalasAverage >= 100) {
+    console.log(`Koalas won the best of 3 with ${koalasAverage.toFixed(1)}. Congrats!!`);
+}
+else if (dolphinsAverage === koalasAverage) {
+    console.log(`It was a draw. Both teams did well and at the end everybody won.`);
+}
+else if ((dolphinsAverage > koalasAverage) && dolphinsAverage > 100) {
+    console.log(`No winner. Even though Dolphins did well on the best of 3, the result was ${dolphinsAverage}. Try again next season!`);
+}
+else {
+    console.log(`No winner. Even though Koalas did well on the best of 3, the result was ${koalasAverage}. Try again next season!`);
 }
 
