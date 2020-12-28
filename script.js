@@ -445,6 +445,7 @@ Test data:
  Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
  Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 */
+/*
 // DATA 1
 // const dolphinsGame1 = 96;
 // const dolphinsGame2 = 108;
@@ -466,11 +467,11 @@ Test data:
 // DATA 3
 const dolphinsGame1 = 97;
 const dolphinsGame2 = 112;
-const dolphinsGame3 = 101;
+const dolphinsGame3 = 80;
 
 const koalasGame1 = 109;
 const koalasGame2 = 95;
-const koalasGame3 = 106;
+const koalasGame3 = 50;
 
 const dolphinsAverage = (dolphinsGame1 + dolphinsGame2 + dolphinsGame3) / 3;
 const koalasAverage = (koalasGame1 + koalasGame2 + koalasGame3) / 3;
@@ -484,10 +485,102 @@ else if ((koalasAverage > dolphinsAverage) && koalasAverage >= 100) {
 else if (dolphinsAverage === koalasAverage) {
     console.log(`It was a draw. Both teams did well and at the end everybody won.`);
 }
-else if ((dolphinsAverage > koalasAverage) && dolphinsAverage > 100) {
+else if ((dolphinsAverage > koalasAverage) && dolphinsAverage < 100) {
     console.log(`No winner. Even though Dolphins did well on the best of 3, the result was ${dolphinsAverage}. Try again next season!`);
 }
 else {
     console.log(`No winner. Even though Koalas did well on the best of 3, the result was ${koalasAverage}. Try again next season!`);
 }
+*/
 
+/*
+const day = 'monday';
+
+switch (day) {
+    case 'monday': // day === 'monday'
+        console.log(`Plan course structure`)
+        console.log(`Go to coding meetup`)
+        break;
+    case 'tuesday':
+        console.log(`Prepare theory videos`);
+        break;
+    case 'wednesday':
+    case 'thurday':
+        console.log(`Write code examples`);
+        break;
+    case 'friday':
+        console.log(`Record videos`);
+        break;
+    case 'Saturday':
+    case 'Sunday':
+        console.log(`Enjoy the weekend ;)`)
+        break;
+    default:
+        console.log(`Not a valid day!`)
+}
+*/
+
+// Conditional operator
+/*
+const age = 17;
+// age >= 18 ? console.log(`I like to drink beer`) :
+//     console.log(`Should drink water`);
+
+const drink = age >= 18 ? 'Beer' : `Water`;
+console.log(drink);
+
+// regular if statement
+let drink2;
+if (age >= 18) {
+    drink2 = 'Beer'
+}
+else {
+    drink2 = 'Water'
+}
+
+console.log(drink2);
+
+// Using a conditional operator inside a console. Whatever produces a value, it can be stored in the place holder.
+console.log(`I like to drink ${age >= 18 ? 'beer' : 'water'}`)
+*/
+
+
+// CHALLENGE 4
+
+
+/*
+Steven wants to build a very simple tip calculator for whenever he goes eating in a
+restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+300. If the value is different, the tip is 20%.
+Your tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+this. It's not allowed to use an if/else statement (If it's easier for you, you can
+start with an if/else statement, and then try to convert it to a ternary
+operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value
+(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+316.25”
+Test data:
+ Data 1: Test for bill values 275, 40 and 430
+Hints:
+ To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+ Value X is between 50 and 300, if it's >= 50 && <= 300
+*/
+
+// const bill = 275;
+// const bill = 40;
+// const bill = 430;
+// const tipLower = (15 / 100) * bill;
+// const tipHigher = (20 / 100) * bill;
+// const billTotalTipLower = tipLower + bill;
+// const billTotalTipHigher = tipHigher + bill;
+
+// bill >= 50 && bill <= 300 ? console.log(`We use 15% to calculate this bill. The bill was ${bill} and the tip was ${tipLower}. The total value is ${billTotalTipLower}.`) :
+//     console.log(`We used 20% to calculate this bill. The bill was ${bill} and the tip was ${tipHigher}. The total value is ${billTotalTipHigher}.`);
+
+// how the challenge was solved
+
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value
+${bill + tip}`);
